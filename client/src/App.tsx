@@ -25,6 +25,7 @@ import { Tips, TipsPage } from './components/tips.tsx'
 import { useTranslation } from 'react-i18next'
 import { MomentsPage } from './page/moments'
 import { ErrorPage } from './page/error.tsx'
+import MusicCard from "./components/MusicCard";
 
 function App() {
   const ref = useRef(false)
@@ -181,6 +182,13 @@ function App() {
               <ErrorPage error={t('error.not_found')} />
             </RouteMe>
           </Switch>
+          <MusicCard
+             title="好きだから"
+             artist="『ユイカ』"
+             cover="https://image.wendoudou.dpdns.org/%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%8B%E3%82%89-%E3%80%8E%E3%83%A6%E3%82%A4%E3%82%AB%E3%80%8F.jpg"
+             src="https://music.wendoudou.dpdns.org/%E3%80%8E%E3%83%A6%E3%82%A4%E3%82%AB%E3%80%8F%20-%20%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%8B%E3%82%89%E3%80%82.mp3"
+/>
+
         </ProfileContext.Provider>
       </ClientConfigContext.Provider>
     </>
